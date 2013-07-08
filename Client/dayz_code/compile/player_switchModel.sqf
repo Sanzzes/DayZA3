@@ -21,8 +21,23 @@ private ["_playerUID"];
 	};
 
 //BackUp Weapons and Mags
-private ["_primweapon","_secweapon"];
-
+private ["_weapons","_magazines","_primweapon","_secweapon"];
+	_weapons 	= weapons player;
+    
+_currentmag = currentMagazine player;
+_secmag = (handgunMagazine player) select 0;
+_magArray = [];
+if (_currentmag != "") then {
+_magArray = _magArray + [_currentmag];
+};
+if (_secmag != "") then {
+_magArray = _magArray + [_secmag];
+};
+if ((_secmag == _currentMag) and (_currentMag != "")) then {
+    _magArray = [_currentmag];
+};
+	_magazines = vestItems player;
+    _magazines = _magazines + _magArray;
 //	if ( (_playerUID == dayz_playerUID) && (count _magazines == 0) && (count (magazines player) > 0 )) exitWith {cutText ["can't count magazines!", "PLAIN DOWN"]};
 
 
@@ -46,13 +61,14 @@ private ["_primweapon","_secweapon"];
 //	};
 
 //BackUp Backpack
-private ["_newBackpackType","_backpackWpn","_backpackMag"];
+private ["_newBackpackType","_backpackWpn","_backpackMag","_vest","_vestitems"];
 	dayz_myBackpack = unitBackpack player;
 	_newBackpackType = (typeOf dayz_myBackpack);
 	if(_newBackpackType != "") then {
 		_backpackWpn = getWeaponCargo unitBackpack player;
 		_backpackMag = getMagazineCargo unitBackpack player;
 	};
+_vest = vest player;
 
 //Get Muzzle
 	_currentWpn = currentWeapon player;
@@ -61,33 +77,9 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 		_currentWpn = currentMuzzle player;
 	};
 
-//Get Current Ammo
-private ["_currentmag","_secmag","_magArray","_vestClass","_magazines","_otheritems"];
-    _currentmag = currentMagazine player;
-    _secmag = (handgunMagazine player) select 0;
-    _magArray = [];
-    if (_currentmag != "") then {
-    _magArray = _magArray + [_currentmag];
-    };
-    if (_secmag != "") then {
-    _magArray = _magArray + [_secmag];
-    };
-    if ((_secmag == _currentMag) and (_currentMag != "")) then {
-        _magArray = [_currentmag];
-    };
-    
-//Get Vest and magazines
-    _vestClass = vest player;
-	_magazines = vestItems player;
-    
-//Get Utilities
-    _otheritems = assignedItems player;
-    
 //Debug Message
 	diag_log "Attempting to switch model";
 	diag_log str(_weapons);
-	diag_log str(_magArray);
-	diag_log str(_vestClass);
 	diag_log str(_magazines);
 	diag_log (str(_backpackWpn));
 	diag_log (str(_backpackMag));
@@ -97,6 +89,8 @@ private ["_currentmag","_secmag","_magArray","_vestClass","_magazines","_otherit
 
 //BackUp Player Object
 	_oldUnit = player;
+    
+_otheritems = assignedItems player;
 	
 /***********************************/
 //DONT USE player AFTER THIS POINT
@@ -117,15 +111,40 @@ private ["_currentmag","_secmag","_magArray","_vestClass","_magazines","_otherit
     removeUniform _newUnit;
     removeHeadgear _newUnit;
     removeGoggles _newUnit;
-    removeVest _newUnit;
+	removeVest _newUnit;
     removeAllAssignedItems _newUnit;
 
+	if(_vest != (vest _newUnit) && _vest != "") then {
+		_newUnit addVest _vest;
+	};
 //Equip New Charactar
 
 	{
 		_newUnit addWeapon _x;
 		//sleep 0.05;
 	} forEach _weapons;
+    
+	{
+		if (typeName _x == "ARRAY") then {_newUnit addMagazine [_x select 0,_x select 1] } else { _newUnit addMagazine _x };
+		//sleep 0.05;
+	} forEach _magazines;
+	
+    
+    
+
+//Check and Compare it
+	if(str(_weapons) != str(weapons _newUnit)) then {
+		//Get Differecnce
+		{
+			_weapons = _weapons - [_x];
+		} forEach (weapons _newUnit);
+	
+		//Add the Missing
+		{
+			_newUnit addWeapon _x;
+			//sleep 0.2;
+		} forEach _weapons;
+	};
 	
 	if(_primweapon !=  (primaryWeapon _newUnit)) then {
 		_newUnit addWeapon _primweapon;		
@@ -134,19 +153,7 @@ private ["_currentmag","_secmag","_magArray","_vestClass","_magazines","_otherit
 	if(_secweapon != (secondaryWeapon _newUnit) && _secweapon != "") then {
 		_newUnit addWeapon _secweapon;		
 	};
-    
-//Add and Fill Vest
-	if(!isNil "_vestClass") then {
-        if(_vestClass != "") then {
-            _newUnit addVest _vestClass;
-            _newVest = vest _newUnit;
-            WaitUntil{!isNil "_newVest"};
-            {
-                if (typeName _x == "ARRAY") then {_newUnit addMagazine [_x select 0,_x select 1] } else { _newUnit addMagazine _x };
-                //sleep 0.05;
-            } forEach _magazines;
-        };
-	};
+
 //Add and Fill BackPack
 	if (!isNil "_newBackpackType") then {
 		if (_newBackpackType != "") then {

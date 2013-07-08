@@ -22,7 +22,6 @@ _backy = backpackItems _character;
 _otheritems = assignedItems _character;
 _magazines = vestItems _character;
 _currentmag = currentMagazine _character;
-private ["_secmag","_magArray","_weapons"];
 _secmag = (handgunMagazine _character) select 0;
 
 _magArray = [];
@@ -36,6 +35,7 @@ _weapons = [primaryWeapon _character, handgunWeapon _character];
 if ((_secmag == _currentMag) and (_currentMag != "")) then {
     _magArray = [_currentmag];
 };
+
 _force =	_this select 2;
 _force =	true;
 
@@ -112,8 +112,6 @@ if (_characterID != "0") then {
 	};
 	if (!_isNewGear) then {
 		//diag_log ("gear..."); sleep 0.05;
-        _vestMags = vestItems _character;
-        waitUntil{!isnil "_vestMags"};
         _arrayM = _magazines + _magArray;
 		_playerGear = [[vest _character] + _weapons + _otheritems ,_arrayM];		
 		diag_log ("playerGear: " +str(_playerGear) + "_backy gear: " +str(_backy));
@@ -121,8 +119,6 @@ if (_characterID != "0") then {
 		_playerBackp = [typeOf _backpack,getWeaponCargo _backpack,getMagazineCargo _backpack];
 	} else {
 		//diag_log ("gear..."); sleep 0.05;
-        _vestMags = vestItems _character;
-        waitUntil{!isnil "_vestMags"};
         _arrayM = _magazines + _magArray;
 		_playerGear = [[vest _character] + _weapons + _otheritems ,_arrayM];		
 		diag_log ("playerGear: " +str(_playerGear) + "_backy gear: " +str(_backy));

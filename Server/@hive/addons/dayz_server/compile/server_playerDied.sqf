@@ -18,28 +18,24 @@ _killerName = _victim getVariable["AttackedByName", "nil"];
 if (_killerName != "nil") then
 {
 	_weapon = _victim getVariable["AttackedByWeapon", "nil"];
-	_distanceNum = _victim getVariable["AttackedFromDistance", "nil"];
+	_distance = _victim getVariable["AttackedFromDistance", "nil"];
 	_displayname = getText (configFile >> 'CfgWeapons' >> _weapon >> 'displayName');
-    if ((!isNil "_distance") and (!isNil "_weapon")) then {
-        if((_weapon != "nil") and  and (_weapon != "") and (_distance != "nil") and (_distance > 0)) then {
-            _distance = round _distanceNum;
-            if (_victimName == _killerName) then 
-            {
-                _message = format["%1 killed himself",_victimName];
-                _loc_message = format["PKILL: %1 killed himself", _victimName];
-            }
-            else 
-            {
-                _killerPlayerID = getPlayerUID _killer;
-                _message = format["%1 was killed by %2 ( %3 | %4m )",_victimName, _killerName, _displayname, _distance];
-                _loc_message = format["PKILL: %1 (%5) was killed by %2 (%6) with weapon %3 from %4m", _victimName, _killerName, _weapon, _distance, _playerID, _killerPlayerID];
-            };
+	if (_victimName == _killerName) then 
+	{
+		_message = format["%1 killed himself",_victimName];
+		_loc_message = format["PKILL: %1 killed himself", _victimName];
+	}
+	else 
+	{
+		_killerPlayerID = getPlayerUID _killer;
+		_message = format["%1 was killed by %2 ( %3 | %4m )",_victimName, _killerName, _displayname, _distance];
+		_loc_message = format["PKILL: %1 (%5) was killed by %2 (%6) with weapon %3 from %4m", _victimName, _killerName, _weapon, _distance, _playerID, _killerPlayerID];
+	};
 
-            
-            diag_log _loc_message;
-            [[[_message], { cutText [format['%1',(_this select 0)],'PLAIN DOWN']; }], "BIS_fnc_spawn", true, false] call BIS_fnc_MP;
-        };
-    };
+	diag_log _loc_message;
+	//[nil, nil, rTITLETEXT, _message, "PLAIN DOWN", 0] call RE;
+    [[[_message], { cutText [format['%1',(_this select 0)],'PLAIN DOWN']; }], "BIS_fnc_spawn", true, false] call BIS_fnc_MP;
+    
 	// Cleanup
 	_victim setVariable["AttackedBy", "nil", true];
 	_victim setVariable["AttackedByName", "nil", true];
