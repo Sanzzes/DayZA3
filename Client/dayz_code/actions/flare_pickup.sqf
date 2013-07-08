@@ -25,6 +25,8 @@ if (_red) then { _text = "Red Chemlight"; };
 if (_blue) then { _text = "Blue Chemlight"; };
 if (_green) then { _text = "Green Chemlight"; };
 if (_yellow) then { _text = "Yellow Chemlight"; };
+s_player_dropflare = player addAction [format[localize "str_actions_medical_16","Chemlight"], "\z\addons\dayz_code\actions\flare_drop.sqf",_flare, 1, false, true, "", ""];
+s_player_hideflare = player addAction [format["Hide Chemlight"], "\z\addons\dayz_code\actions\flare_hide.sqf",_flare, 1, false, true, "", ""];
 
 while {(alive _flare) and dayz_hasLight} do {
 	sleep 0.1;

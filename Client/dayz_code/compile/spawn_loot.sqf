@@ -30,23 +30,11 @@ switch (_iClass) do {
 	case "weapon": {
 		//Item is a weapon, add it and a random quantity of magazines
 		_item = createVehicle ["WeaponHolder", _iPos, [], _radius, "CAN_COLLIDE"];
-        if (_iItem == "arifle_MXC_F") then {
-            _iItem = ["arifle_MXC_F","arifle_MXC_Holo_F"] call BIS_fnc_selectRandom;
-        };
-        if (_iItem == "hgun_ACPC2_F") then {
-            _iItem = ["hgun_ACPC2_F","hgun_ACPC2_snds_F"] call BIS_fnc_selectRandom;
-        };
-        if (_iItem == "hgun_P07_F") then {
-            _iItem = ["hgun_P07_F","hgun_P07_snds_F"] call BIS_fnc_selectRandom;
-        };
-        if (_iItem == "hgun_Rook40_F") then {
-            _iItem = ["hgun_Rook40_F","hgun_Rook40_snds_F"] call BIS_fnc_selectRandom;
-        };
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
 		if ((count _mags) > 0) then {
 			if (_mags select 0 == "Quiver") then { _mags set [0, "WoodenArrow"] }; // Prevent spawning a Quiver
-			_item addMagazineCargoGlobal [(_mags select 0), (round(random 3))];
+			_item addMagazineCargoGlobal [(_mags select 0), (round(random 2))];
 		};
 	};
 	case "weaponNA": {

@@ -501,80 +501,6 @@ class cfgWeapons {
 	class Mk_48_DZ : Mk_48 {
 		type = "1";
 	};
-	class M24;	// External class reference
-	
-	class M24_DZ : M24 {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class M24_des;	// External class reference
-	
-	class M24_des_DZ : M24_des {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class M4SPR;	// External class reference
-	
-	class M4SPR_DZ : M4SPR {
-		type = "1";
-        magazines[] = {"20Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_StanagSD", "30Rnd_556x45_G36", "30Rnd_556x45_G36SD"};
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class SVD_Camo;	// External class reference
-	
-	class SVD_Camo_DZ : SVD_Camo {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class DMR;	// External class reference
-	
-	class DMR_DZ : DMR {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class huntingrifle;	// External class reference
-	
-	class huntingrifle_DZ : huntingrifle {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class LeeEnfield;	// External class reference
-	
-	class LeeEnfield_DZ : LeeEnfield {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class M14_EP1;	// External class reference
-	
-	class M14_EP1_DZ : M14_EP1 {
-		type = "1";
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
-	class BAF_LRR_scoped;	// External class reference
-	
-	class BAF_LRR_scoped_DZ : BAF_LRR_scoped {
-		type = "1";
-        magazines[] = {"10Rnd_86x70_L115A1"};
-        class WeaponSlotsInfo {
-            allowedslots[] = {901};
-        };
-	};
 	class M107;	// External class reference
 	
 	class M107_DZ : M107 {
@@ -676,15 +602,7 @@ class cfgMagazines {
 			};
 		};
 	};
-	class 10Rnd_86x70_L115A1: CA_Magazine {
-        ammo = "B_86x70_Ball_noTracer";
-        count = 10;
-        descriptionshort = "Caliber: .338 <br/>Rounds: 10 <br/>Used in: L115A1";
-        displayname = "10Rnd. .338 Lapua Magnum";
-        initspeed = 936;
-        picture = "\CA\weapons_BAF\data\UI\M_lrr_CA.paa";
-        scope = 2;
-    };
+	
 	class 2Rnd_shotgun_74Slug : 8Rnd_B_Beneli_74Slug {
 		displayName = "2Rnd. Slug";
 		count = 2;

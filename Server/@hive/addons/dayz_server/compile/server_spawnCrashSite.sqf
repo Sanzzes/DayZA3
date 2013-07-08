@@ -85,9 +85,9 @@ while {(server_totalCrashes <= 8)} do {
 		//End old mechanism
 		
 		//Start NEW mechanism
-	        _itemTypes = [["FN_FAL","weapon"], ["bizon_silenced","weapon"], ["M107_DZ","weapon"],["BAF_AS50_scoped","weapon"],["","medical"],["100Rnd_762x54_PK","magazine"],["M14_EP1_DZ","weapon"], ["FN_FAL_ANPVS4","weapon"], ["Mk_48_DZ","weapon"], ["M249_DZ","weapon"], ["BAF_L85A2_RIS_SUSAT","weapon"], ["DMR_DZ","weapon"], ["G36C","weapon"], ["G36C_camo","weapon"], ["G36_C_SD_camo","weapon"], ["G36A_camo","weapon"], ["G36K_camo","weapon"], ["", "military"], ["MedBox0", "object"], ["NVGoggles", "weapon"], ["AmmoBoxSmall_556", "object"], ["AmmoBoxSmall_762", "object"], ["Skin_Camo1_DZ", "magazine"], ["Skin_Sniper1_DZ", "magazine"], ["SVD_CAMO_DZ","weapon"], ["M24_DZ","weapon"], ["M4A1_AIM_SD_camo","weapon"], ["Sa58P_EP1","weapon"], ["Sa58V_CCO_EP1","weapon"], ["Sa58V_EP1","weapon"], ["Sa58V_RCO_EP1","weapon"], ["M4SPR","weapon"], ["BAF_LRR_scoped_DZ","weapon"]];
+	        _itemTypes = [["FN_FAL","weapon"], ["bizon_silenced","weapon"], ["M107_DZ","weapon"],["BAF_AS50_scoped","weapon"],["","medical"],["100Rnd_762x54_PK","magazine"],["M14_EP1","weapon"], ["FN_FAL_ANPVS4","weapon"], ["Mk_48_DZ","weapon"], ["M249_DZ","weapon"], ["BAF_L85A2_RIS_SUSAT","weapon"], ["DMR","weapon"], ["G36C","weapon"], ["G36C_camo","weapon"], ["G36_C_SD_camo","weapon"], ["G36A_camo","weapon"], ["G36K_camo","weapon"], ["", "military"], ["MedBox0", "object"], ["NVGoggles", "weapon"], ["AmmoBoxSmall_556", "object"], ["AmmoBoxSmall_762", "object"], ["Skin_Camo1_DZ", "magazine"], ["Skin_Sniper1_DZ", "magazine"], ["SVD_CAMO","weapon"], ["M24","weapon"], ["M4A1_AIM_SD_camo","weapon"], ["Sa58P_EP1","weapon"], ["Sa58V_CCO_EP1","weapon"], ["Sa58V_EP1","weapon"], ["Sa58V_RCO_EP1","weapon"], ["M4SPR","weapon"]];
 	        
-	        _itemChance = [0.02, 0.05,0.02,0.01,0.5,0.01,0.05,0.02,0.03,0.05,0.01,0.06,0.03,0.02,0.01,0.02,0.02,1,0.5,0.02,0.1,0.1,0.08,0.05,0.08,0.08,0.03,0.04,0.02,0.03,0.01,0.03,0.03];
+	        _itemChance = [0.02, 0.05,0.02,0.01,0.5,0.01,0.05,0.02,0.03,0.05,0.01,0.06,0.03,0.02,0.01,0.02,0.02,1,0.5,0.02,0.1,0.1,0.08,0.05,0.08,0.08,0.03,0.04,0.02,0.03,0.01,0.03];
 	        _weights = [];
 	        _weights = [_itemType,_itemChance] call fnc_buildWeightedArray;
 	        _cntWeights = count _weights;

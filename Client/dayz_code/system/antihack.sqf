@@ -12,7 +12,7 @@ _lastpos = getPosATL (vehicle player);
 _lastheight = (ATLtoASL _lastpos) select 2;
 _lasttime = time;
 
-while {alive player} do 
+while {alive player} do
 {
 	_curpos = getPosATL (vehicle player);
 	_curheight = (ATLtoASL _curpos) select 2;
