@@ -111,7 +111,7 @@ _nearby = _position nearObjects ["building",_radius];
 _nearbyCount = count _nearby;
 if (_nearbyCount < 1) exitwith 
 {
-	if ((dayz_spawnZombies < _maxWildZombies))  then {
+	if ((dayz_spawnZombies < _maxWildZombies) and !_inVehicle)  then {
 		[_position] call wild_spawnZombies;
 	};
 };
@@ -123,7 +123,7 @@ if (_nearbyCount < 1) exitwith
 	_dis = _x distance player;
 	
 	//Loot
-	if ((_dis < 120) and (_dis > 30) and _canLoot) then {
+	if ((_dis < 120) and (_dis > 30) and _canLoot and !_inVehicle) then {
 		_looted = (_x getVariable ["looted",-0.1]);
 		_cleared = (_x getVariable ["cleared",true]);
 		_dateNow = (DateToNumber date);
