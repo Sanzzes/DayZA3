@@ -132,7 +132,7 @@ while {true} do {
 
 	//Hunger
 	if (_refObj == player) then {
-	_hunger = +((((r_player_bloodTotal - r_player_blood) / r_player_bloodTotal) * 5) + (_speed / 3) + dayz_myLoad) * 4;
+	_hunger = +((((r_player_bloodTotal - r_player_blood) / r_player_bloodTotal) * 5) + (_speed / 2) + dayz_myLoad) * 4;
     } else {
 	_hunger = +((((r_player_bloodTotal - r_player_blood) / r_player_bloodTotal) * 5)) * 4;
     };
@@ -144,7 +144,7 @@ while {true} do {
 	//Thirst
 	_thirst = 27;
 	if (_refObj == player) then {
-		_thirst = ((_speed + 4) / 2) * 5;
+		_thirst = ((_speed / 2) + 4) * 5;
 	};
 	dayz_thirst = dayz_thirst + (_thirst / 60) * (dayz_temperatur / dayz_temperaturnormal);	//TeeChange Temperatur effects added Max Effects: -25% and + 16.6% waterloss
 

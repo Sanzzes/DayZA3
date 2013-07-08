@@ -4,7 +4,6 @@ class CfgMagazines {
 	class ItemTent : CA_Magazine {
 		scope = public;
 		count = 1;
-        mass = 10;
 		type = (256 * 3);
 		displayName = $STR_EQUIP_NAME_20;
 		model = "\dayz_equip\models\tentbag_gear.p3d";
@@ -99,7 +98,6 @@ class CfgMagazines {
 		scope = 2;
 		ammo = "SurvivalPack";
 		count = 1;
-        mass = 3;
 		descriptionshort = "Medical pack for universal needs.";
 		displayname = "Survival Medical Pack";
 		model = "\A3\Weapons_F\Items\FirstAidkit";
@@ -143,86 +141,73 @@ class CfgMagazines {
 	class ItemSodaCoke; //External class reference
 	
 	class ItemSodaCokeEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "\dayz_equip\models\soda_coke_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
 	class ItemSodaPepsiEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "\dayz_equip\models\soda_pepsi_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
 	class ItemSodaMdewEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "\dayz_equip\models\soda_mdew_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
 
 	class ItemSodaMtngreen : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_0;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_0;
 		model = "z\addons\dayz_communityassets\models\soda_mtngreen_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mtngreen_clean_full_ca.paa";
 	};
 	class ItemSodaMtngreenEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_mtngreen_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mtngreen_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
 
 	class ItemSodaR4z0r : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_1;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_1;
 		model = "z\addons\dayz_communityassets\models\soda_r4z0r_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_r4z0r_clean_full_ca.paa";
 	};
 	class ItemSodaR4z0rEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_r4z0r_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_r4z0r_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
 
 	class ItemSodaClays : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_2;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_2;
 		model = "z\addons\dayz_communityassets\models\soda_clays_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_clays_clean_full_ca.paa";
 	};
 	class ItemSodaClaysEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_clays_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_clays_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
 
 	class ItemSodaSmasht : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_3;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_3;
 		model = "z\addons\dayz_communityassets\models\soda_smasht_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_smasht_clean_full_ca.paa";
 	};
 	class ItemSodaSmashtEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_smasht_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_smasht_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
 
 	class ItemSodaDrwaste : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_4;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_4;
 		model = "z\addons\dayz_communityassets\models\soda_drwaste_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_drwaste_clean_full_ca.paa";
 	};
 	class ItemSodaDrwasteEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_drwaste_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_drwaste_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -241,14 +226,12 @@ class CfgMagazines {
 	};
 */
 	class ItemSodaLemonade : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_6;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_6;
 		model = "z\addons\dayz_communityassets\models\soda_lemonade_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lemonade_clean_full_ca.paa";
 	};
 	class ItemSodaLemonadeEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_lemonade_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lemonade_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -267,28 +250,24 @@ class CfgMagazines {
 	};
 */
 	class ItemSodaLvg : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_8;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_8;
 		model = "z\addons\dayz_communityassets\models\soda_lvg_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lvg_clean_full_ca.paa";
 	};
 	class ItemSodaLvgEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_lvg_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lvg_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
 
 	class ItemSodaMzly : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_9;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_9;
 		model = "z\addons\dayz_communityassets\models\soda_mzly_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mzly_clean_full_ca.paa";
 	};
 	class ItemSodaMzlyEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_mzly_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mzly_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -307,14 +286,12 @@ class CfgMagazines {
 	};
 */
 	class ItemSodaRabbit : ItemSodaCoke {
-        mass = 3;
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_11;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_11;
 		model = "z\addons\dayz_communityassets\models\soda_rabbit_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_rabbit_clean_full_ca.paa";
 	};
 	class ItemSodaRabbitEmpty : ItemSodaEmpty{
-        mass = 3;
 		model = "z\addons\dayz_communityassets\models\soda_rabbit_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_rabbit_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -335,7 +312,6 @@ class CfgMagazines {
 */
 	class FoodEdible;
 	class FoodmeatRaw : FoodEdible {
-        mass = 5;
 		scope = public;
 		count = 1;
 		type = 256;
@@ -346,42 +322,36 @@ class CfgMagazines {
 		bloodRegen = 100;
 	};
 	class FoodmuttonRaw : FoodmeatRaw {
-        mass = 5;
 		displayName = $STR_FOOD_EQIP_CODE_NAME_1;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_1;
 		bloodRegen = 100;
 	};
 	
 	class FoodchickenRaw : FoodmeatRaw {
-        mass = 5;
 		displayName = $STR_FOOD_EQIP_CODE_NAME_2;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_2;
 		bloodRegen = 100;
 	};
 	
 	class FoodrabbitRaw : FoodmeatRaw {
-        mass = 3;
 		displayName = $STR_FOOD_EQIP_CODE_NAME_3;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_3;
 		bloodRegen = 400;
 	};
     
     class FoodzombieRaw : FoodmeatRaw {
-        mass = 7;
 		displayName = "Infectious Raw Meat";
 		descriptionShort = "Gutted meat from a zombie's carcass.";
 		bloodRegen = 50;
     };
     
     class FoodhumanRaw : FoodmeatRaw {
-        mass = 7;
 		displayName = "Cooked Human Flesh";
 		descriptionShort = "Raw flesh from a survivor's body.";
 		bloodRegen = 60;
     };
 	
 	class FoodbaconRaw : FoodmeatRaw {
-        mass = 3;
 		displayName = $STR_FOOD_EQIP_CODE_NAME_4;
 		model = "z\addons\dayz_communityassets\models\bacon_raw.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_bacon_raw_CA.paa";
@@ -389,14 +359,12 @@ class CfgMagazines {
 		bloodRegen = 150;
 	};
 	class FoodbeefRaw : FoodmeatRaw {
-        mass = 5;
 		displayName = $STR_FOOD_EQIP_CODE_NAME_6;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_6;
 		bloodRegen = 100;
 	};
 	
 	class FoodmeatCooked : FoodEdible {
-        mass = 5;
 		scope = public;
 		count = 1;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_0;
@@ -406,21 +374,18 @@ class CfgMagazines {
 		bloodRegen = 800;
 	};
 	class FoodmuttonCooked : FoodmeatCooked {
-        mass = 5;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_1;
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_1;
 		bloodRegen = 400;
 	};
 	
 	class FoodchickenCooked : FoodmeatCooked {
-        mass = 5;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_2;
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_2;
 		bloodRegen = 400;
 	};
 	
 	class FoodbaconCooked : FoodmeatCooked {
-        mass = 3;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_4;
 		model = "z\addons\dayz_communityassets\models\bacon_fried.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_bacon_fried_CA.paa";
@@ -428,25 +393,21 @@ class CfgMagazines {
 		bloodRegen = 400;
 	};
 	class FoodrabbitCooked : FoodmeatCooked {
-        mass = 3;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_3;
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_3;
 		bloodRegen = 1600;
 	};
 	class FoodbeefCooked : FoodmeatCooked {
-        mass = 5;
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_6;
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_6;
 		bloodRegen = 600;
 	};
     class FoodzombieCooked : FoodmeatCooked {
-        mass = 7;
 		displayName = "Infectious Cooked Meat";
 		descriptionShort = "Gutted meat from a zombie's carcass that's been cooked to a crisp.";
 		bloodRegen = 100;
     };
     class FoodhumanCooked : FoodmeatCooked {
-        mass = 7;
 		displayName = "Cooked Human Flesh";
 		descriptionShort = "Cooked flesh from a survivor's body that's been cooked to a crisp.";
 		bloodRegen = 120;
@@ -462,7 +423,6 @@ class CfgMagazines {
 		bloodRegen = 100;
 	};
 	class FoodMRE : FoodEdible {
-        mass = 10;
 		scope = public;
 		count = 1;
 		bloodRegen = 800;
@@ -473,7 +433,6 @@ class CfgMagazines {
 	};
 	
 	class FoodPistachio : FoodEdible {
-        mass = 3;
 		scope = public;
 		count = 1;
 		bloodRegen = 100;
@@ -484,7 +443,6 @@ class CfgMagazines {
 	};
 	class FoodNutmix : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 100;
 		displayName = $STR_FOOD_NAME_NUTMIX;
@@ -495,7 +453,6 @@ class CfgMagazines {
 	
 	class FoodCanGriff : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_GRIFF;
@@ -505,7 +462,6 @@ class CfgMagazines {
 	};
 	class FoodCanBadguy : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_BADGUY;
@@ -515,7 +471,6 @@ class CfgMagazines {
 	};
 	class FoodCanBoneboy : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_BONEBOY;
@@ -525,7 +480,6 @@ class CfgMagazines {
 	};
 	class FoodCanCorn : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_CORN;
@@ -535,7 +489,6 @@ class CfgMagazines {
 	};
 	class FoodCanCurgon : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_CURGON;
@@ -554,7 +507,6 @@ class CfgMagazines {
 	};
 	class FoodCanFraggleos : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_FRAGGLEOS;
@@ -564,7 +516,6 @@ class CfgMagazines {
 	};
 	class FoodCanHerpy : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_HERPY;
@@ -574,7 +525,6 @@ class CfgMagazines {
 	};
 	class FoodCanOrlok : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_ORLOK;
@@ -584,7 +534,6 @@ class CfgMagazines {
 	};
 	class FoodCanPowell : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_POWELL;
@@ -594,7 +543,6 @@ class CfgMagazines {
 	};
 	class FoodCanTylers : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_TYLERS;
@@ -604,7 +552,6 @@ class CfgMagazines {
 	};
 	class FoodCanUnlabeled : FoodEdible {
 		scope = public;
-        mass = 3;
 		count = 1;
 		bloodRegen = 200;
 		displayName = $STR_FOOD_NAME_CAN_UNLABELED;
@@ -616,7 +563,6 @@ class CfgMagazines {
 	class TrashTinCan;
 	class FoodCanGriffEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		model = "z\addons\dayz_communityassets\models\can_griff_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_griff_clean_empty_ca.paa";
@@ -626,7 +572,6 @@ class CfgMagazines {
 	};
 	class FoodCanBadguyEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_BADGUY_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_BADGUY_EMPTY;
@@ -636,7 +581,6 @@ class CfgMagazines {
 	};
 	class FoodCanBoneboyEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_BONEBOY_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_BONEBOY_EMPTY;
@@ -646,7 +590,6 @@ class CfgMagazines {
 	};
 	class FoodCanCornEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_CORN_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_CORN_EMPTY;
@@ -656,7 +599,6 @@ class CfgMagazines {
 	};
 	class FoodCanCurgonEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_CURGON_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_CURGON_EMPTY;
@@ -666,7 +608,6 @@ class CfgMagazines {
 	};
 	class FoodCanDemonEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_DEMON_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_DEMON_EMPTY;
@@ -676,7 +617,6 @@ class CfgMagazines {
 	};
 	class FoodCanFraggleosEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_FRAGGLEOS_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_FRAGGLEOS_EMPTY;
@@ -686,7 +626,6 @@ class CfgMagazines {
 	};
 	class FoodCanHerpyEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_HERPY_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_HERPY_EMPTY;
@@ -696,7 +635,6 @@ class CfgMagazines {
 	};
 	class FoodCanOrlokEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_ORLOK_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_ORLOK_EMPTY;
@@ -706,7 +644,6 @@ class CfgMagazines {
 	};
 	class FoodCanPowellEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_POWELL_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_POWELL_EMPTY;
@@ -716,7 +653,6 @@ class CfgMagazines {
 	};
 	class FoodCanTylersEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_TYLERS_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_TYLERS_EMPTY;
@@ -726,7 +662,6 @@ class CfgMagazines {
 	};
 	class FoodCanUnlabeledEmpty : TrashTinCan {
 		scope = public;
-        mass = 3;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_UNLABELED_EMPTY;
 		descriptionShort = $STR_FOOD_DESC_CAN_UNLABELED_EMPTY;
@@ -737,13 +672,11 @@ class CfgMagazines {
 	
 	class ItemWaterbottle;
 	class ItemWaterbottleBoiled : ItemWaterbottle {
-        mass = 5;
 		displayName = $STR_ITEMWATERBOTTLEBOILED_CODE_NAME;
 		descriptionShort = $STR_ITEMWATERBOTTLEBOILED_CODE_DESC;
 	 };
 	 class Hatchet_Swing;
 	 class Machete_Swing : Hatchet_Swing {
-        mass = 0;
 		displayName = "Machete";
 		displayNameMagazine = "Machete";
 		shortNameMagazine = "Machete";
@@ -751,7 +684,6 @@ class CfgMagazines {
 	};
 	
 	class ItemTrashToiletpaper : CA_Magazine {
-        mass = 5;
 		scope = public;
 		count = 1;
 		displayName = $STR_JUNK_NAME_TOILETPAPER;
@@ -761,7 +693,6 @@ class CfgMagazines {
 		type = 256;
 	};
 	class ItemTrashRazor : CA_Magazine {
-        mass = 3;
 		scope = public;
 		count = 1;
 		displayName = $STR_JUNK_NAME_RAZOR;
@@ -776,7 +707,6 @@ class CfgMagazines {
 	
 	class 2Rnd_shotgun_74Slug: 8Rnd_B_Beneli_74Slug
 	{
-        mass = 5;
 		displayName="2Rnd. Slug";
 		count=2;
 		descriptionShort="Caliber: 12 gauge <br/>Rounds: 2 <br/>Used in: M1014";
@@ -804,7 +734,6 @@ class CfgMagazines {
 	};
 	class 2Rnd_shotgun_74Pellets: 8Rnd_B_Beneli_Pellets
 	{
-        mass = 5;
 		displayName="2Rnd. Pellets";
 		count=2;
 		descriptionShort="Caliber: 12 gauge <br/>Rounds: 2 Pellets<br/>Used in: M1014";

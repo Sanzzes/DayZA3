@@ -3,6 +3,7 @@ _class 			= _this;
 
 _position 		= getPosATL player;
 _dir 			= getDir player;
+_curgroup       = (group leader (group (player)));
 _currentAnim 	= animationState player;
 //_currentCamera	= cameraView;
 
@@ -23,6 +24,7 @@ private ["_playerUID"];
 //BackUp Weapons and Mags
 private ["_weapons","_magazines","_primweapon","_secweapon"];
 	_weapons 	= weapons player;
+	_magazines	= call player_countmagazines; //magazines player;
     
 _currentmag = currentMagazine player;
 _secmag = (handgunMagazine player) select 0;
@@ -111,12 +113,13 @@ _otheritems = assignedItems player;
     removeUniform _newUnit;
     removeHeadgear _newUnit;
     removeGoggles _newUnit;
-	removeVest _newUnit;
     removeAllAssignedItems _newUnit;
 
 	if(_vest != (vest _newUnit) && _vest != "") then {
-		_newUnit addVest _vest;
+		_newUnit addItem _vest;		
+		_newUnit assignItem _vest;		
 	};
+
 //Equip New Charactar
 
 	{
