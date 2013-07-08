@@ -370,16 +370,6 @@ if (_canPickLightR and !dayz_hasLight) then {
 		player removeAction s_doClothes3;
 		s_doClothes3 = -1;
 	};
-	_hasEpi = 		"ItemEpinephrine" in magazines player;
-	//Allow epi adrenaline
-	if(_vehicle == player and _hasEpi and (!r_player_adren)) then {
-		if(s_player_adren < 0) then {
-			s_player_adren = player addAction [format["<t color='#FF0000'>Inject Epinephrine</t>"], "z\addons\dayz_code\medical\adren.sqf",[_unit], 1, true, true, "", "'ItemEpinephrine' in magazines player"];
-		};
-	} else	{
-		player removeAction s_player_adren;
-		s_player_adren = -1;
-	};
 //End of A3 Scroll functions
 
 if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4)) then {	//Has some kind of target
